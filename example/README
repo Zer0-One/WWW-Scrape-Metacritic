@@ -1,0 +1,17 @@
+rest_ps3
+========
+
+This script presents a *very* simple REST API that may be queried for
+information on PS3 games listed on Metacritic. All information is returned as
+JSON, with content type "application/json". The API is presented as follows:
+    
+    GET at /games, which returns information on all 10 of Metacritic's top PS3 games
+    GET at /games/$title, which returns information on the game you specify with $title
+
+By default, this script starts an HTTP server in the foreground on port 3000.
+To modify this behavior, see the command-line options with: 
+
+    ./rest_ps3.pl --help
+
+Dependencies:
+    - Dancer >= 1.3202

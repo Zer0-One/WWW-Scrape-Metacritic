@@ -2,18 +2,24 @@ WWW-Scrape-Metacritic version 0.01
 ==================================
 
 This module implements functionality for scraping data from Metacritic's
-website.
-    
+website. It is highly dependent on Metacritic's markup (style names, element
+heirarchy, etc.), and as such should be expected to break when the Metacritic
+website changes significantly enough.
+
 Currently, features include:
     - Lists of top rated games for each platform
-    - Scores for any given title
+    - Info for any given title
+    - JSON output
+
+For usage documentation, see `perldoc WWW::Scrape::Metacritic` after installing
+this module.
 
 New features will be added as I become more bored with the rest of my life.
 
 INSTALLATION
 ============
 
-To install this module type the following:
+To run unit tests and install this module, type the following:
 
    perl Makefile.PL
    make
@@ -23,10 +29,17 @@ To install this module type the following:
 DEPENDENCIES
 ============
 
-This module requires the following modules:
+This module requires the following non-core modules:
 
+    - JSON
 	- WWW::Mechanize
 	- WWW::Mechanize::TreeBuilder
+
+EXAMPLES
+========
+
+Bundled with this distribution is an "examples" folder containing example
+scripts utilizing WWW::Scrape::Metacritic. See `examples/README' for more info.
 
 LICENSE
 =======
